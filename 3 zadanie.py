@@ -1,10 +1,11 @@
+#Цвет поля
 def a(k, l):
     if (k + l) % 2 == 0:
         return "белый"
     else:
         return "чёрный"
 
-
+# Проверка функции на угрозу полю
 def b(figure, k, l, m, n):
     if figure == "ферзь" or figure == "ладья":
         if k == m or l == n:
@@ -17,6 +18,7 @@ def b(figure, k, l, m, n):
             return True
     return False
 
+# Ход фигуры
 def c(figure, k, l, m, n):
     if figure == "ладья":
         if k == m or l == n:
