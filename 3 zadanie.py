@@ -31,6 +31,7 @@ def c(figure, k, l, m, n):
             return True
     return False
 
+# Попадание на поле за 2 хода
 def d(figure, k, l, m, n):
     if figure == "слон":
         for i in range(1, 9):
@@ -40,14 +41,14 @@ def d(figure, k, l, m, n):
         return False
     else:
         return False
-
+# Определение клетки в которую попадает фигура после ходов
 def e(figure, k, l, m, n):
     for i in range(1, 9):
         for j in range(1, 9):
             if c(figure, k, l, i, j) and c(figure, i, j, m, n):
                 return i, j
     return None
-
+# Преобразование в шахматный формат (D1, E2, C5 и тд)
 def f(coord):
     letters = ['А', 'B', 'C', 'D', 'E', 'F', 'G', 'H']
     letter = letters[coord[1] - 1]
